@@ -70,11 +70,13 @@ def meth_remontee(A,B):
             x.append(0)
     if trisup(A) and diag_non_nuls(A):
         x[n-1]=B[n-1]/A[n-1] [n-1]
-        for i in range (n-2,0):
+        for i in range (n-1,-1,-1): # 
             s=0
-            for j in range (i+1,n-1):
+            for j in range (i+1,n): # 3 ==> 0 1 2 
                 s += (A[i][j]*x[j])
             x[i]=(B[i]-s)/A[i][i]
+            
+            
     return x
 
 
